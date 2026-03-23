@@ -17,23 +17,65 @@
                 <h1>FastPig</h1>
                 <p>Ветеринарная клинника</p>
             </div>
-
+        </div>
         <div class="auth-body" v-if="!isLoggedIn">
+            <div class="toggle-buttons">
+                <button class="toggle-btn":class="{ active: isLogin }" @click="isLogin = true">Вход</button>
+                <button class="toggle-btn":class="{ active: !isLogin }" @click="isLogin = false">Регистрация</button>
+            </div>
+            
+            <form v-if="isLogin" @submit.prevent="handleLogin">
+                <div class="form-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" v-model="loginForm.email" placeholder="Email" required>
+                </div>
 
+                <div class="form-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" v-model="loginForm.password" placeholder="Пароль" required>
+                </div>
+                <button type="submit" class="submit-btn">Войти</button>
+            </form>
 
+            <form v-else @submit.prevent="handleRegister">
+                <div class="form-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" v-model="rigisterForm.Name" placeholder="Имя" required>
+                </div>       
 
+                <div class="form-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" v-model="registerForm.email" placeholder="Email" required>
+                </div>
 
+                <div class="form-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" v-model="registerForm.password" placeholder="Пароль" required>
+                </div>
+
+                <div class="form-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" v-model="registerForm.confirmPassword" placeholder="Подтвердите пароль" required>
+                </div>
+
+                <div v-if="registerError" class="error-message">{{registerError}}</div>
+
+                <button type="submit" class="submit-btn">Зарегистрироваться</button>
+            </form>
+            <div class="demo-note">
+                <i class="fas fa-info-circle"></i>Возникли проблеммы?
+                <a href="https://t.me/ani1on" target="_blank">Обратитесь за помощью</a>
+            </div>
+            
+            <div class="auth-body" v-else>
+                <div class="logged-in-view">
+                    <i class="fas fa-smile-wink"></i>
+                    <h2>С возвращением {{ userName}} !</h2>
+                    <p>Вы успешно вошли в систему.</p>
+                    <button class="gototape-btn" @click="goto-tape">Продолжить</button>
+                </div>
+            </div>
         </div>
-
-
-
-        </div>
-
-
-
-
-
-
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/auth.js"></script>

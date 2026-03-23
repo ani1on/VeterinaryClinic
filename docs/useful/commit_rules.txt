@@ -1,0 +1,12 @@
+Список основных типов (type)
+Type	    Описание	                                        Пример
+feat	    Новый функционал	                                feat(api): add user registration
+fix	        Исправление бага	                                fix(cart): resolve calculation error
+docs	    Изменения в документации	                        docs: update API documentation
+style	    Форматирование (пробелы, точки с запятыми)	        style: fix indentation in auth.js
+refactor	Рефакторинг (без изменения функционала) 	        refactor: extract validation to separate module
+test	    Добавление или изменение тестов            	        test: add e2e tests for checkout
+chore	    Обслуживание (обновление зависимостей, настройки)	chore: update dependencies
+perf	    Улучшение производительности	                    perf: cache database queries
+ci	        Изменения в CI/CD	                                ci: add sonarcloud analysis
+build	    Изменения в сборке	                                build: update webpack config
