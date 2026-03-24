@@ -24,3 +24,176 @@ body{
     overflow: hidden;
     border: 2px solid rgba(255, 255, 255, 0.5);
 }
+
+.auth-header{
+    background: #2c6e4f;
+    color:white;
+    padding: 30px 30px 20px;
+    text-align: center;
+}
+
+.auth-header i {
+    font-size: 4rem;
+    color: #ffd966;
+    margin-bottom: 10px;
+}
+
+.auth-header h1{
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.auth-header p{
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+.auth-body {
+    padding: 30px;
+}
+
+.toggle-buttons{
+    display:flex;
+    gap:10px;
+    margin-bottom: 25px;
+    background:#edf7f2;
+    border-radius: 60px;
+    padding: 5px;
+}
+
+.toggle-btn{
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 12px;
+    border-radius: 60px;
+    font-size: 1rem;
+    color: #2c6e4f;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.toggle-btn.active{
+    background: #2c6e4f;
+    color:white;
+    box-shadow: 0 4px 10px rgta(44,110,79,0.3);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #2c6e4f;
+    font-size: 1.2rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px 15px 15px 50px;
+    border: 2px solid #d0e6dd;
+    border-radius: 60px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.2s;
+    background: white;
+}
+
+.form-group input:focus {
+    border-color: #2c6e4f;
+    box-shadow: 0 0 0 4px rgba(44, 110, 79, 0.2);
+}
+
+.error-message {
+    color: #c44545;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    margin-left: 15px;
+    font-weight: 500;
+}
+
+.submit-btn {
+    width: 100%;
+    background: #2c6e4f;
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 60px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 8px 20px rgba(44, 110, 79, 0.3);
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #1f4f3a;
+    transform: scale(1.02);
+}
+
+.logged-in-view {
+    text-align: center;
+}
+
+.logged-in-view i {
+    font-size: 5rem;
+    color: #2c6e4f;
+}
+
+.logged-in-view h2 {
+    margin: 15px 0 5px;
+    color: #1f4f3a;
+}
+
+.gototape-btn {
+    background: #c44545;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 60px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.2s;
+}
+
+.gototape-btn:hover {
+    background: #a12e2e;
+}
+
+.demo-note {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #3d5a4c;
+    background: #e9f3ef;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.demo-note i {
+    color: #f4b942;
+    margin-right: 10px;
+}
+
+.demo-note a{
+
+    color: #2c6e4f;
+
+}
+
+.demo-note a:visited{
+    color:#1f4f3a;
+}
+
+.demo-note a:hover{
+    color: #66ac8c;
+}
